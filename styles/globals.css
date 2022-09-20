@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --bs-gradient: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0));
+}
+
+@layer components {
+
+  html,
+  body {
+    @apply  !font-poppins;
+  }
+
+  header,
+  nav,
+  section,
+  article,
+  aside,
+  footer,
+  hgroup {
+    @apply block;
+  }
+
+  .header-main {
+    @apply z-[100] h-24 justify-center bg-[#E6CF7C];
+
+    &.header-sticky {
+      @apply min-h-[80px];
+    }
+  }
+
+  .wrapper {
+    @apply relative;
+  }
+
+  .container {
+    @apply m-auto;
+
+    &::before {
+      @apply absolute top-0 left-0 right-0 bottom-0 -z-50 bg-red-500 bg-[url('../assets/4.jpg')] bg-cover bg-fixed bg-center opacity-100 blur content-[''];
+    }
+  }
+
+  .content-wrapper {
+    @apply relative flex h-screen flex-wrap items-center justify-center;
+  }
+
+  .loading-container {
+    @apply m-auto flex h-screen content-center justify-center;
+
+    &>div {
+      @apply  !m-auto;
+    }
+  }
+
+  .busy-container {
+    @apply mt-20 flex h-screen w-full justify-center object-center p-[100px] text-white;
+  }
+
+  .white-busy-container {
+    @apply text-white;
+  }
+
+  .pay-search .PhoneInput {
+    @apply  !contents;
+  }
+
+  .PhoneInput {
+    & .PhoneInputInput {
+      background: transparent;
+    }
+
+    & .PhoneInputCountrySelect {
+      @apply bg-[#363840];
+    }
+  }
+
+  .input-icon {
+    @apply text-amber-200;
+
+    & svg {
+      @apply mx-1 h-6 w-6;
+    }
+  }
+
+  .input-icon-check {
+    @apply absolute z-20 ml-4 mt-2 text-green-500;
+
+    & svg {
+      @apply h-4 w-4;
+    }
+  }
+}
