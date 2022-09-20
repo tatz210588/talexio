@@ -1,6 +1,6 @@
 .vercel
 node_modules
-studio
+
 lib
 .DS_Store
 .next

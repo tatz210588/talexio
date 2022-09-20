@@ -1,4 +1,3 @@
-import { isCommunityResourcable } from "@ethersproject/providers";
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import toast, { Toaster } from "react-hot-toast";
